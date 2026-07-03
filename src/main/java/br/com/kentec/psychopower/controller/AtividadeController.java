@@ -1,4 +1,4 @@
-package br.com.kentec.controller;
+package br.com.kentec.psychopower.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;

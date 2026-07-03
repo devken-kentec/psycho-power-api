@@ -1,4 +1,4 @@
-package br.com.kentec.util;
+package br.com.kentec.psychopower.util;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

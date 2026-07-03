@@ -1,4 +1,4 @@
-package br.com.kentec.domain;
+package br.com.kentec.psychopower.domain;
 
 import java.io.Serializable;
 
@@ -7,32 +7,31 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="pergunta")
+@Table(name="modalidade")
 @SuppressWarnings("serial")
-public class Pergunta implements Serializable {
-	
+public class Modalidade implements Serializable {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable = false, length = 11)
 	private Long id;
 	
-	@Column(name="titulo", nullable = true, length = 64)
-	private String titulo;
-	
-	@ManyToOne
-	@JoinColumn(name = "id_imagem", nullable = false)
-	private Imagem imagem = new Imagem();
+	@Column(name="nome", nullable = true, length = 64)
+	private String nome;
 	
 	@Column(name="status", nullable = true, length = 7)
 	private String status;
 	
-	public Pergunta() {
+	public Modalidade() {
 		
+	}
+	
+	public Modalidade(String nome, String status) {
+		this.nome = nome;
+		this.status = status;
 	}
 
 	public Long getId() {
@@ -43,20 +42,12 @@ public class Pergunta implements Serializable {
 		this.id = id;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public Imagem getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(Imagem imagem) {
-		this.imagem = imagem;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getStatus() {
@@ -69,6 +60,6 @@ public class Pergunta implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Pergunta [id=" + id + ", titulo=" + titulo + ", imagem=" + imagem + ", status=" + status + "]";
+		return "Modalidade [id=" + id + ", nome=" + nome + ", status=" + status + "]";
 	}
 }

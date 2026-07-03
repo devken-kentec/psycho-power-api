@@ -1,4 +1,4 @@
-package br.com.kentec.configuration;
+package br.com.kentec.psychopower.configuration;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.kentec.domain.Modalidade;
-import br.com.kentec.domain.TipoAtividade;
-import br.com.kentec.domain.User;
-import br.com.kentec.util.Comum;
-import br.com.kentec.repository.ModalidadeRepository;
-import br.com.kentec.repository.TipoAtividadeRepository;
-import br.com.kentec.repository.UserRepository;
+import br.com.kentec.psychopower.domain.Modalidade;
+import br.com.kentec.psychopower.domain.TipoAtividade;
+import br.com.kentec.psychopower.domain.User;
+import br.com.kentec.psychopower.repository.ModalidadeRepository;
+import br.com.kentec.psychopower.repository.TipoAtividadeRepository;
+import br.com.kentec.psychopower.repository.UserRepository;
+import br.com.kentec.psychopower.util.Comum;
 
 @Configuration
 @Profile("dev")

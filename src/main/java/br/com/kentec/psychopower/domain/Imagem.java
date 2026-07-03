@@ -1,4 +1,4 @@
-package br.com.kentec.domain;
+package br.com.kentec.psychopower.domain;
 
 import java.io.Serializable;
 import java.util.Arrays;
