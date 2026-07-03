@@ -29,7 +29,6 @@ public class ImagemAtividade implements Serializable {
 	@JoinColumn(name = "id_imagem", nullable = false)
 	private Imagem imagem = new Imagem();
 	
-	
 	@Column(name="status", nullable = true, length = 7)
 	private String status;
 	

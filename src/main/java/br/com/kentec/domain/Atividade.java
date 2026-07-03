@@ -40,6 +40,10 @@ public class Atividade implements Serializable {
 	private String uri;
 	
 	@ManyToOne
+	@JoinColumn(name = "id_pergunta", nullable = false)
+	private Pergunta pergunta = new Pergunta();
+	
+	@ManyToOne
 	@JoinColumn(name = "id_modalidade", nullable = false)
 	private Modalidade modalidade = new Modalidade();
 	
@@ -134,10 +138,18 @@ public class Atividade implements Serializable {
 		this.status = status;
 	}
 
+	public Pergunta getPergunta() {
+		return pergunta;
+	}
+
+	public void setPergunta(Pergunta pergunta) {
+		this.pergunta = pergunta;
+	}
+
 	@Override
 	public String toString() {
 		return "Atividade [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", idadeMinima=" + idadeMinima
-				+ ", idadeMaxima=" + idadeMaxima + ", url=" + url + ", uri=" + uri + ", modalidade=" + modalidade
-				+ ", tipoAtividade=" + tipoAtividade + ", status=" + status + "]";
+				+ ", idadeMaxima=" + idadeMaxima + ", url=" + url + ", uri=" + uri + ", pergunta=" + pergunta
+				+ ", modalidade=" + modalidade + ", tipoAtividade=" + tipoAtividade + ", status=" + status + "]";
 	}
 }

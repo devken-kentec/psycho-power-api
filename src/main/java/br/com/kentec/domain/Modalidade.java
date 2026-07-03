@@ -28,6 +28,11 @@ public class Modalidade implements Serializable {
 	public Modalidade() {
 		
 	}
+	
+	public Modalidade(String nome, String status) {
+		this.nome = nome;
+		this.status = status;
+	}
 
 	public Long getId() {
 		return id;
